@@ -24,4 +24,7 @@ public interface ProductInventoryMapper {
 
     @Select("select * from product_inventory where id = #{id}")
     public ProductInventory findById(@Param("id") Long id);
+
+    @Select("select * from product_inventory where product_id = #{productId}")
+    public ProductInventory findByProductId(@Param("productId") Long productId);
 }
